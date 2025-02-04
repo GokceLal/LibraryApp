@@ -26,9 +26,8 @@ public class RestApiUrls {
     public static final String DELETE_BOOK = "/deleteBook";
     public static final String API_GOOGLE_BOOKS = API + GOOGLE_BOOKS;
     public static final String SEARCH_GOOGLE_BOOKS = "/searchBooks";
-
-
+    public static final String SAVE_GOOGLE_BOOKS = "/save";
+    public static final String ALL_PUBLISHERS = "/allPublisher";
+    public static final String ALL_BOOKS = "/allBooks";
+    public static final String ALL_AUTHORS = "/allAuthors";
 }
-//AIzaSyCwdR--XNf10VGYgMf2TEXFjscsNzHc9bE
-//https://www.google.books.ap+.url=https://www.googleap+s.com/books/v1/volumes?q=AIzaSyCwdR--XNf10VGYgMf2TEXFjscsNzHc9bE
-//https://www.googleapis.com/books/v1/volumes?q=time&printType=magazines&key=AIzaSyCwdR--XNf10VGYgMf2TEXFjscsNzHc9bE

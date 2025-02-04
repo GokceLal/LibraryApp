@@ -17,6 +17,7 @@ public class GoogleBooksResponse {
         private String title;
         private List<String> authors;
         private String publisher;
+        private String publishedDate;
         private List<IndustryIdentifier> industryIdentifiers;
     }
 

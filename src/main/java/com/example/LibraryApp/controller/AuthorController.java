@@ -1,5 +1,6 @@
 package com.example.LibraryApp.controller;
 
+import com.example.LibraryApp.dto.response.AuthorResponseDTO;
 import com.example.LibraryApp.entity.Author;
 import com.example.LibraryApp.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class AuthorController {
       private AuthorService authorService;
 
     @GetMapping(GET_ALL_AUTHORS)
-    public List<Author> getAllAuthors() {
-        return authorService.getAllAuthors();
+    public List<AuthorResponseDTO> getAllAuthors() {
+        return authorService.getAllAuthors().stream().map(AuthorResponseDTO::new).toList();
     }
 }

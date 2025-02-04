@@ -23,8 +23,7 @@ public class GoogleBooksService {
     private final AuthorRepository authorRepository;
     private final PublisherRepository publisherRepository;
 
-// Aramaya göre kitapta , yazarda ve yayıneviye göre geçen kelimenin kitaplarını aratma
-
+    // Aramaya göre kitapta , yazarda ve yayıneviye göre geçen kelimenin kitaplarını aratma
     public List<Book> searchBooks(String query) {
         GoogleBooksResponse response = googleBooksClient.searchBooks(query);
         return response.getItems().stream()
@@ -33,7 +32,6 @@ public class GoogleBooksService {
                 .toList();
     }
 
-
     // DTO'ya dönüştürme işlemi
     private Book convertToBook(GoogleBooksResponse.Item item) {
         GoogleBooksResponse.VolumeInfo info = item.getVolumeInfo();
@@ -41,7 +39,7 @@ public class GoogleBooksService {
                 ? info.getIndustryIdentifiers().get(0).getIdentifier()
                 : "N/A";
 
-        return new Book(null, info.getTitle(), 1431.8, isbn, 2023, new Publisher(info.getPublisher() != null ? info.getPublisher() : "Unknown"), new Author(info.getAuthors() != null ?  info.getAuthors().stream().collect(Collectors.joining(", ")) : "Unknown"));
+        return new Book(null, info.getTitle(), 1431.8, isbn, 2023, new Publisher(info.getPublisher() != null ? info.getPublisher() : "Unknown"), new Author(info.getAuthors() != null ? info.getAuthors().stream().collect(Collectors.joining(", ")) : "Unknown"));
     }
 
     public void saveBooksFromGoogle(String query) {
@@ -49,7 +47,7 @@ public class GoogleBooksService {
     }
 
     //Tüm yayınevlerini listele
-    public List<String> allPublishers() {
+    public List<String> getAllPublishers() {
         GoogleBooksResponse response = googleBooksClient.searchBooks("subject:books");
 
         if (response == null || response.getItems() == null) {
@@ -69,9 +67,8 @@ public class GoogleBooksService {
     }
 
     //Tüm kitapları listele
-    public List<String> allBooks() {
+    public List<String> getAllBooks() {
         GoogleBooksResponse response = googleBooksClient.searchBooks("subject:books");
-
 
         if (response == null || response.getItems() == null) {
             return List.of();
@@ -84,7 +81,7 @@ public class GoogleBooksService {
     }
 
     // Tüm yazarları listele
-    public List<String> allAuthors() {
+    public List<String> getAllAuthors() {
         GoogleBooksResponse response = googleBooksClient.searchBooks("subject:books");
 
         if (response == null || response.getItems() == null) {
@@ -99,4 +96,34 @@ public class GoogleBooksService {
                 .toList();
     }
 
+    // A harfi ile başlayan kitapları listele
+    public List<String> getStartingWithA() {
+        GoogleBooksResponse response = googleBooksClient.searchBooks("subject:books");
+
+        if (response == null || response.getItems() == null) {
+            return List.of();
+        }
+
+        return response.getItems().stream()
+                .map(item -> item.getVolumeInfo().getTitle()) // Sadece kitap adını al
+                .filter(title -> title != null && !title.isEmpty()) // Boş veya null başlıkları filtrele
+                .filter(title -> title.startsWith("A")) // A harfi ile başlayan kitapları filtrele
+                .toList();
+    }
+
+    // 2023'ten sonra basılan kitapları listele
+    public List<String> getBookAfter2023() {
+        GoogleBooksResponse response = googleBooksClient.searchBooks("subject:books");
+
+        if (response == null || response.getItems() == null) {
+            return List.of();
+        }
+
+        return response.getItems().stream()
+                .map(item -> item.getVolumeInfo().getTitle()) // Sadece kitap adını al
+                .filter(title -> title != null && !title.isEmpty()) // Boş veya null başlıkları filtrele
+                .filter(title -> title.startsWith("A")) // A harfi ile başlayan kitapları filtrele
+                .toList();
+
+    }
 }
