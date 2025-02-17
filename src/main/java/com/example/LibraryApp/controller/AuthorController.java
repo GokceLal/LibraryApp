@@ -23,5 +23,6 @@ public class AuthorController {
     @GetMapping(GET_ALL_AUTHORS)
     public List<AuthorResponseDTO> getAllAuthors() {
         return authorService.getAllAuthors().stream().map(AuthorResponseDTO::new).toList();
+
     }
 }

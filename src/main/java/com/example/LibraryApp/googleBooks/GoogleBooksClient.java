@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 public interface GoogleBooksClient {
 
-    @GetMapping("/volumes?q={query}&key=AIzaSyCwdR--XNf10VGYgMf2TEXFjscsNzHc9bE")
+    @GetMapping("/volumes?q={query}&key={apiKey}")
     GoogleBooksResponse searchBooks(@PathVariable("query") String query);
 }

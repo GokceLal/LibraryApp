@@ -2,7 +2,7 @@ spring:
     datasource:
         url: jdbc:postgresql://localhost:5432/librarydb
         username: postgres
-        password: postgres
+        password: root
         driver-class-name: org.postgresql.Driver
 
     jpa:
@@ -10,3 +10,7 @@ spring:
         ddl-auto: update
     server:
       port: 8080
+
+    google:
+      books:
+        api-key: "AIzaSyCwdR--XNf10VGYgMf2TEXFjscsNzHc9bE"
