@@ -145,5 +145,27 @@ LibraryApp
 My Linkedin Profile [Linkedin Pages](https://tr.linkedin.com/in/gokcelalarslan).
 
 
+Projenin görselleri aşağıdadır. Burada yer alan görseller kodun yaptıklarının sadece bir kısmıdır.
 
 
+
+
+<img width="518" alt="Screenshot 2025-02-10 at 13 04 07" src="https://github.com/user-attachments/assets/3804f5e9-05d7-4a3e-85a6-808a3c9cf96f" />
+
+
+<img width="1105" alt="Screenshot 2025-02-17 at 13 55 31" src="https://github.com/user-attachments/assets/6cd4be2e-e786-44f6-bf18-79d47122f426" />
+
+
+<img width="1088" alt="Screenshot 2025-02-17 at 13 55 58" src="https://github.com/user-attachments/assets/200cd685-1821-4fce-a07c-b49cfd8bc879" />
+
+
+<img width="1467" alt="Screenshot 2025-02-17 at 13 53 59" src="https://github.com/user-attachments/assets/7986b9ce-3d2f-4891-8e33-139641b327f3" />
+
+
+<img width="1086" alt="Screenshot 2025-02-17 at 13 56 32" src="https://github.com/user-attachments/assets/ca0ebc4f-e90d-4ae9-8928-da02c96bd456" />
+
+
+<img width="1157" alt="Screenshot 2025-02-17 at 13 54 39" src="https://github.com/user-attachments/assets/9dd32fa8-dbec-4fbc-83ce-612d985c915b" />
+
+
+<img width="1466" alt="Screenshot 2025-02-17 at 13 54 13" src="https://github.com/user-attachments/assets/3b54f4a8-f668-4b3e-b419-43ed895943be" />
